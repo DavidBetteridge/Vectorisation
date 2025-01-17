@@ -1,0 +1,21 @@
+We have an array of numbers we wish to add together.
+
+Which is quicker for each or a for loop
+
+Show code
+
+Explain benchmark .net
+[ReturnValueValidator(failOnError: true)]
+[ColumnChart(Title = "Adding Numbers", Colors = "skyblue,slateblue")]
+
+Show timings
+
+What is the difference?  Show assembly
+
+Can we remove bounds checks
+
+No joy.
+
+Can we parallel it?  Show different block sizes
+
+Add linq for completeness

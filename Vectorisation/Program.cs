@@ -1,13 +1,16 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Collections.Concurrent;
+using System.Runtime.CompilerServices;
 using Benchly;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Running;
 
+
+
 // Run all the tests in the class AddingTests annotated with [Benchmark]
 BenchmarkRunner.Run<AddingTests>();
 
-[ColumnChart(Title = "Column Chart", Colors = "skyblue,slateblue")]
+[ColumnChart(Title = "Adding Numbers", Colors = "skyblue,slateblue")]
 [MemoryDiagnoser, SimpleJob(RuntimeMoniker.Net90)]
 
 // Include memory usage
@@ -38,37 +41,37 @@ public class AddingTests
         return total;
     }
 
-    [Benchmark]
-    public int Basic_ForEach()
-    {
-        var total = 0;
-        foreach (var value in _data)
-            total += value;
-        return total;
-    }
-
-    // No lower bound check?
-    [Benchmark]
-    public int Using_UInt()
-    {
-        var total = 0;
-        for (uint i = 0; i < _data.Length; i++)
-            total += _data[i];
-        return total;
-    }
-
-    // No bound checks?
-    [Benchmark]
-    public int Using_Unchcked()
-    {
-        unchecked
-        {
-            var total = 0;
-            for (uint i = 0; i < _data.Length; i++)
-                total += _data[i];
-            return total;
-        }
-    }
+    // [Benchmark]
+    // public int Basic_ForEach()
+    // {
+    //     var total = 0;
+    //     foreach (var value in _data)
+    //         total += value;
+    //     return total;
+    // }
+    //
+    // // No lower bound check?
+    // [Benchmark]
+    // public int Using_UInt()
+    // {
+    //     var total = 0;
+    //     for (uint i = 0; i < _data.Length; i++)
+    //         total += _data[i];
+    //     return total;
+    // }
+    //
+    // // No bound checks?
+    // [Benchmark]
+    // public int Using_Unchecked()
+    // {
+    //     unchecked
+    //     {
+    //         var total = 0;
+    //         for (uint i = 0; i < _data.Length; i++)
+    //             total += _data[i];
+    //         return total;
+    //     }
+    // }
 
     // [Benchmark]
     // public int Parallel_ForLoop()
@@ -92,50 +95,91 @@ public class AddingTests
     //     return total;
     // }
 
-
+    // [Benchmark]
+    // public int Parallel_ForLoop_10()
+    // {
+    //     const int numberOfBlocks = 10;
+    //     var blockSize = _data.Length / numberOfBlocks;
+    //     var bag = new ConcurrentBag<int>();
+    //     
+    //     Parallel.For(0, numberOfBlocks, i =>
+    //     {
+    //         var localTotal = 0;
+    //         for (var j = (i*blockSize); j < ((i+1)*blockSize); j++)
+    //         {
+    //             localTotal += _data[j];
+    //         }
+    //         bag.Add(localTotal);
+    //         
+    //     });
+    //     return bag.Sum();
+    // }
+    
     [Benchmark]
-    public int UnSafeAdd()
+    public int Parallel_ForLoop_2()
     {
-        var total = 0;
-        ref var start = ref _data[0];
-        for (var i = 0; i < _data.Length; i++)
+        const int numberOfBlocks = 2;
+        var blockSize = _data.Length / numberOfBlocks;
+        var bag = new ConcurrentBag<int>();
+        
+        Parallel.For(0, numberOfBlocks, i =>
         {
-            total += Unsafe.Add(ref start, i); // Access array elements without bounds checks
-        }
-
-        return total;
-    }
-
-    [Benchmark]
-    public int Span_ForLoop()
-    {
-        var s = _data.AsSpan();
-        var total = 0;
-        for (var i = 0; i < s.Length; i++)
-            total += s[i];
-        return total;
-    }
-
-    [Benchmark]
-    public int Pointers()
-    {
-        unsafe
-        {
-            var total = 0;
-
-            fixed (int* ptr = _data) // Pin the array in memory
+            var localTotal = 0;
+            for (var j = (i*blockSize); j < ((i+1)*blockSize); j++)
             {
-                var current = ptr;
-                for (var i = 0; i < _data.Length; i++)
-                {
-                    total += *current; // Dereference the pointer and add the value to sum
-                    current++; // Move the pointer to the next element
-                }
+                localTotal += _data[j];
             }
-
-            return total;
-        }
+            bag.Add(localTotal);
+            
+        });
+        return bag.Sum();
     }
+
+    
+    //
+    // [Benchmark]
+    // public int UnSafeAdd()
+    // {
+    //     var total = 0;
+    //     ref var start = ref _data[0];
+    //     for (var i = 0; i < _data.Length; i++)
+    //     {
+    //         total += Unsafe.Add(ref start, i); // Access array elements without bounds checks
+    //     }
+    //
+    //     return total;
+    // }
+    //
+    // [Benchmark]
+    // public int Span_ForLoop()
+    // {
+    //     var s = _data.AsSpan();
+    //     var total = 0;
+    //     for (var i = 0; i < s.Length; i++)
+    //         total += s[i];
+    //     return total;
+    // }
+    //
+    // [Benchmark]
+    // public int Pointers()
+    // {
+    //     unsafe
+    //     {
+    //         var total = 0;
+    //
+    //         fixed (int* ptr = _data) // Pin the array in memory
+    //         {
+    //             var current = ptr;
+    //             for (var i = 0; i < _data.Length; i++)
+    //             {
+    //                 total += *current; // Dereference the pointer and add the value to sum
+    //                 current++; // Move the pointer to the next element
+    //             }
+    //         }
+    //
+    //         return total;
+    //     }
+    // }
 
     [Benchmark]
     public int Linq()
