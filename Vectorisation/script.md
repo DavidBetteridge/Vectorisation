@@ -39,3 +39,55 @@ Next job is to look at the actual assembly language.   There are various ways to
 https://godbolt.org/noscript/csharp
 
 View Assembly - what is CORINFO_HELP_RNGCHKFAIL?
+https://devblogs.microsoft.com/dotnet/performance_improvements_in_net_7/
+Quote
+While these bounds checks in and of themselves aren’t super expensive, do a lot of them and their costs add up. So while the JIT needs to ensure that “safe” accesses don’t go out of bounds, it also tries to prove that certain accesses won’t, in which case it needn’t emit the bounds check that it knows will be superfluous. In every release of .NET, more and more cases have been added to find places these bounds checks can be eliminated, and .NET 7 is no exception.
+
+
+## Experiment 2
+
+Can we also remove the bounds checks.   
+
+Uint means the number cannot be negative
+
+Using a local pointer to _data means we know in advance the size of the array.  It can't be changed by another thread.  TEST THIS!
+
+The UINT doesn't help,  but the LocalArray does.
+
+
+## Experiment 3
+
+But can we do better? What making use of all our cores by using Parallel.X.  Let's do the simplest possible thing.
+
+This turns out to be a terrible idea.
+
+The interlock means all the threads get blocked,  and so it's serial again - but with more overhead.
+
+What we really need is for each thread to carry out a chuck of the work.
+
+
+## Experiment 4
+
+But how big should these blocks be
+
+We can use the Params feature in Benchmark.net to try out a range of sizes
+
+Explain the parallel code.  No interlock,  but we put all the intermediate results into a bag,  and then sum that.
+
+Show results.
+
+No good - the more blocks the worse the result. 
+
+
+
+## Experiment 5
+What else can we try?
+
+for with local copy
+foreach
+pointers
+unsafe
+one-line linq
+best parallel
+
+
