@@ -2,13 +2,14 @@
 using System.Runtime.CompilerServices;
 using Benchly;
 using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Diagnosers;
 using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Running;
-
+using Vectorisation;
 
 
 // Run all the tests in the class AddingTests annotated with [Benchmark]
-BenchmarkRunner.Run<AddingTests>();
+BenchmarkRunner.Run<Experiment1>();
 
 [ColumnChart(Title = "Adding Numbers", Colors = "skyblue,slateblue")]
 [MemoryDiagnoser, SimpleJob(RuntimeMoniker.Net90)]
@@ -18,6 +19,7 @@ BenchmarkRunner.Run<AddingTests>();
 
 // All methods must return the sanem number
 [ReturnValueValidator(failOnError: true)]
+// [DisassemblyDiagnoser(printInstructionAddresses: true, syntax: DisassemblySyntax.Masm)]
 public class AddingTests
 {
     private readonly int[] _data;
@@ -27,7 +29,7 @@ public class AddingTests
         const int length = 10000;
         _data = new int[length];
         for (var i = 0; i < length; i++)
-            _data[i] = i + 1;
+            _data[i] = i + 1;       
 
         // Total === (_data.Length + 1) * (_data.Length / 2);
     }
@@ -40,38 +42,46 @@ public class AddingTests
             total += _data[i];
         return total;
     }
+    
+    [Benchmark]
+    public int Local_ForLoop()
+    {
+        var data = _data;
+        var total = 0;
+        for (var i = 0; i < data.Length; i++)
+            total += data[i];
+        return total;
+    }
+    
+    // add      rax, 16
+    // mov      ecx, 0x2710
+    // align    [0 bytes for IG03]
+    // G_M27646_IG03:  ;; offset=0x0021
+    // add      rax, 4
+    // dec      ecx
+    // jne      SHORT G_M27646_IG03
+    //     pop      rbp
+    //     ret      
 
-    // [Benchmark]
-    // public int Basic_ForEach()
-    // {
-    //     var total = 0;
-    //     foreach (var value in _data)
-    //         total += value;
-    //     return total;
-    // }
-    //
-    // // No lower bound check?
-    // [Benchmark]
-    // public int Using_UInt()
-    // {
-    //     var total = 0;
-    //     for (uint i = 0; i < _data.Length; i++)
-    //         total += _data[i];
-    //     return total;
-    // }
-    //
-    // // No bound checks?
-    // [Benchmark]
-    // public int Using_Unchecked()
-    // {
-    //     unchecked
-    //     {
-    //         var total = 0;
-    //         for (uint i = 0; i < _data.Length; i++)
-    //             total += _data[i];
-    //         return total;
-    //     }
-    // }
+    [Benchmark]
+    public int Basic_ForEach()
+    {
+        var total = 0;
+        foreach (var value in _data)
+            total += value;
+        return total;
+    }
+    
+    // No lower bound check?
+    [Benchmark]
+    public int Using_UInt()
+    {
+        var total = 0;
+        for (uint i = 0; i < _data.Length; i++)
+            total += _data[i];
+        return total;
+    }
+    
 
     // [Benchmark]
     // public int Parallel_ForLoop()
@@ -115,27 +125,27 @@ public class AddingTests
     //     return bag.Sum();
     // }
     
-    [Benchmark]
-    public int Parallel_ForLoop_2()
-    {
-        const int numberOfBlocks = 2;
-        var blockSize = _data.Length / numberOfBlocks;
-        var bag = new ConcurrentBag<int>();
-        
-        Parallel.For(0, numberOfBlocks, i =>
-        {
-            var localTotal = 0;
-            for (var j = (i*blockSize); j < ((i+1)*blockSize); j++)
-            {
-                localTotal += _data[j];
-            }
-            bag.Add(localTotal);
-            
-        });
-        return bag.Sum();
-    }
-
-    
+    // [Benchmark]
+    // public int Parallel_ForLoop_2()
+    // {
+    //     const int numberOfBlocks = 2;
+    //     var blockSize = _data.Length / numberOfBlocks;
+    //     var bag = new ConcurrentBag<int>();
+    //     
+    //     Parallel.For(0, numberOfBlocks, i =>
+    //     {
+    //         var localTotal = 0;
+    //         for (var j = (i*blockSize); j < ((i+1)*blockSize); j++)
+    //         {
+    //             localTotal += _data[j];
+    //         }
+    //         bag.Add(localTotal);
+    //         
+    //     });
+    //     return bag.Sum();
+    // }
+    //
+    //
     //
     // [Benchmark]
     // public int UnSafeAdd()
@@ -181,9 +191,9 @@ public class AddingTests
     //     }
     // }
 
-    [Benchmark]
-    public int Linq()
-    {
-        return _data.Sum();
-    }
+    // [Benchmark]
+    // public int Linq()
+    // {
+    //     return _data.Sum();
+    // }
 }

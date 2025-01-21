@@ -7,6 +7,7 @@ Show code
 Explain benchmark .net
 [ReturnValueValidator(failOnError: true)]
 [ColumnChart(Title = "Adding Numbers", Colors = "skyblue,slateblue")]
+COMPlus_JitDisasm=<MethodName>
 
 Show timings
 
@@ -19,3 +20,4 @@ No joy.
 Can we parallel it?  Show different block sizes
 
 Add linq for completeness
+https://godbolt.org/api/noscript/compile

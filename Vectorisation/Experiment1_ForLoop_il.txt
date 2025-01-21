@@ -1,0 +1,75 @@
+  .method public hidebysig instance int32
+    Basic_ForLoop() cil managed
+  {
+    .custom instance void [BenchmarkDotNet.Annotations]BenchmarkDotNet.Attributes.BenchmarkAttribute::.ctor(int32, string)
+      = (
+        01 00 14 00 00 00 41 2f 55 73 65 72 73 2f 64 61 // ......A/Users/da
+        76 69 64 62 65 74 74 65 72 69 64 67 65 2f 56 65 // vidbetteridge/Ve
+        63 74 6f 72 69 73 61 74 69 6f 6e 2f 56 65 63 74 // ctorisation/Vect
+        6f 72 69 73 61 74 69 6f 6e 2f 45 78 70 65 72 69 // orisation/Experi
+        6d 65 6e 74 31 2e 63 73 01 00 54 02 08 42 61 73 // ment1.cs..T..Bas
+        65 6c 69 6e 65 01                               // eline.
+      )
+      // int32(20) // 0x00000014
+      // string('/Users/davidbetteridge/Vectorisation/Vectorisation/Experiment1.cs')
+      // property bool 'Baseline' = bool(true)
+    .maxstack 3
+    .locals init (
+      [0] int32 total,
+      [1] int32 i,
+      [2] bool V_2,
+      [3] int32 V_3
+    )
+
+    // [22 5 - 22 6]
+    IL_0000: nop
+
+    // [23 9 - 23 23]
+    IL_0001: ldc.i4.0
+    IL_0002: stloc.0      // total
+
+    // [24 14 - 24 23]
+    IL_0003: ldc.i4.0
+    IL_0004: stloc.1      // i
+
+    IL_0005: br.s         IL_0016
+    // start of loop, entry point: IL_0016
+
+      // [25 13 - 25 31]
+      IL_0007: ldloc.0      // total
+      IL_0008: ldarg.0      // this
+      IL_0009: ldfld        int32[] Vectorisation.Experiment1::_data
+      IL_000e: ldloc.1      // i
+      IL_000f: ldelem.i4
+      IL_0010: add
+      IL_0011: stloc.0      // total
+
+      // [24 43 - 24 46]
+      IL_0012: ldloc.1      // i
+      IL_0013: ldc.i4.1
+      IL_0014: add
+      IL_0015: stloc.1      // i
+
+      // [24 25 - 24 41]
+      IL_0016: ldloc.1      // i
+      IL_0017: ldarg.0      // this
+      IL_0018: ldfld        int32[] Vectorisation.Experiment1::_data
+      IL_001d: ldlen
+      IL_001e: conv.i4
+      IL_001f: clt
+      IL_0021: stloc.2      // V_2
+
+      IL_0022: ldloc.2      // V_2
+      IL_0023: brtrue.s     IL_0007
+    // end of loop
+
+    // [26 9 - 26 22]
+    IL_0025: ldloc.0      // total
+    IL_0026: stloc.3      // V_3
+    IL_0027: br.s         IL_0029
+
+    // [27 5 - 27 6]
+    IL_0029: ldloc.3      // V_3
+    IL_002a: ret
+
+  } // end of method Experiment1::Basic_ForLoop
