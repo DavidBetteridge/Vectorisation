@@ -85,9 +85,12 @@ What else can we try?
 
 for with local copy
 foreach
+unsafe add
 pointers
-unsafe
+unroll loop
 one-line linq
-best parallel
 
+Which do you think will be quickest?
+
+linq but why?
 
