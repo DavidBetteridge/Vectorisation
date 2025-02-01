@@ -9,6 +9,7 @@
         <PlatformTarget>AnyCPU</PlatformTarget>
         <DebugType>pdbonly</DebugType>
         <DebugSymbols>true</DebugSymbols>
+        <RootNamespace>Vectorisation</RootNamespace>
     </PropertyGroup>
 
 
