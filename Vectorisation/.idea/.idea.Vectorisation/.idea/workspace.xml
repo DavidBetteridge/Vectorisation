@@ -7,19 +7,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e61d84c-3bf4-435d-8d6b-ce8657ddcf44" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/../From0to10000/00_Intro.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/10_Experiment1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/11_Experiment1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment1_Assembly.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/14_Experiment1_Assembly.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment1_ForEach_il.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/12_Experiment1_ForEach_il.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment1_ForLoop_il.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/13_Experiment1_ForLoop_il.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment4.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/Experiment4.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/Experiment4.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment6.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/Experiment6.cs" afterDir="false" />
+    <list default="true" id="7e61d84c-3bf4-435d-8d6b-ce8657ddcf44" name="Changes" comment="wip">
+      <change afterPath="$PROJECT_DIR$/../From0to10000/01_Problem.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../From0to10000/12_Stages.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../From0to10000/14_Disassembly.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../From0to10000/16_coreinfo.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../From0to10000/54_Usage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../From0to10000/71_Conclusion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/12_Experiment1_ForEach_il.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/13_Experiment1_ForEach_il.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/14_Experiment1_Assembly.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/15_Experiment1_Assembly.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/21_Experiment2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/22_Experiment2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/31_Experiment3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/32_Experiment3.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment4.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/41_Experiment4.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/42_Experiment4.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment5.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/51_Experiment5.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment5_Full.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/52_Experiment5_Full.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment5_Small.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/53_Experiment5_Small.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment6.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/61_Experiment6.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment6.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/62_Experiment6.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../From0to10000/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Raw/Vectorisation.Experiment4-columnchart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/Raw/Vectorisation.Experiment4-columnchart.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../From0to10000/script.md" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/script.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Vectorisation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Vectorisation/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +163,7 @@
       <workItem from="1737017636996" duration="14109000" />
       <workItem from="1737449703141" duration="20499000" />
       <workItem from="1738066444478" duration="621000" />
-      <workItem from="1738067643549" duration="10735000" />
+      <workItem from="1738067643549" duration="14127000" />
     </task>
     <task id="LOCAL-00001" summary="First example">
       <option name="closed" value="true" />
@@ -227,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738414865949</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="wip">
+      <option name="closed" value="true" />
+      <created>1738517706434</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738517706434</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,30 +258,11 @@
     <MESSAGE value="First example" />
     <MESSAGE value="Graphs" />
     <MESSAGE value="charts" />
-    <MESSAGE value="wip" />
     <MESSAGE value="More experiments" />
     <MESSAGE value="more" />
     <MESSAGE value="tidy up" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/../From0to10000/Program.cs</url>
-          <line>5</line>
-          <properties documentPath="$PROJECT_DIR$/Program.cs" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="132" />
-            </startOffsets>
-            <endOffsets>
-              <option value="167" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="wip" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip" />
   </component>
 </project>

@@ -18,27 +18,26 @@ public class Experiment4
             _data[i] = i + 1;
     }
 
+
+    [Benchmark]
+    public int Parallel_ForLoop()
+    {
+        var blockSize = _data.Length / NumberOfBlocks;
+        var bag = new ConcurrentBag<int>();
+
+        Parallel.For(0, NumberOfBlocks, i =>
+        {
+            var localTotal = 0;
+            for (var j = (i * blockSize); j < ((i + 1) * blockSize); j++)
+            {
+                localTotal += _data[j];
+            }
+
+            bag.Add(localTotal);
+        });
+        return bag.Sum();
+    }
+
     [Params(1, 2, 10, 20, 50, 100, 5000, 10000)]
     public int NumberOfBlocks { get; set; }
-  
-    
-     [Benchmark]
-     public int Parallel_ForLoop()
-     {
-         var blockSize = _data.Length / NumberOfBlocks;
-         var bag = new ConcurrentBag<int>();
-         
-         Parallel.For(0, NumberOfBlocks, i =>
-         {
-             var localTotal = 0;
-             for (var j = (i*blockSize); j < ((i+1)*blockSize); j++)
-             {
-                 localTotal += _data[j];
-             }
-             bag.Add(localTotal);
-             
-         });
-         return bag.Sum();
-     }
-
 }

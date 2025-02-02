@@ -34,7 +34,7 @@ public class Experiment2
             total += value;
         return total;
     }
-    
+
     // Does UINT mean no lower bound check?
     [Benchmark]
     public int Using_UInt()
