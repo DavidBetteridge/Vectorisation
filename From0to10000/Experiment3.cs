@@ -1,7 +1,7 @@
 using Benchly;
 using BenchmarkDotNet.Attributes;
 
-namespace Vectorisation;
+namespace From0to10000;
 
 [ColumnChart(Title = "Experiment3", Colors = "skyblue,slateblue")]
 [ReturnValueValidator(failOnError: true)]

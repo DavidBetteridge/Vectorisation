@@ -1,7 +1,7 @@
 using Benchly;
 using BenchmarkDotNet.Attributes;
 
-namespace Vectorisation;
+namespace From0to10000;
 
 [ColumnChart(Title = "Experiment1", Colors = "skyblue,slateblue")]
 [ReturnValueValidator(failOnError: true)]
@@ -14,9 +14,9 @@ public class Experiment1
         const int length = 10_000;
         _data = new int[length];
         for (var i = 0; i < length; i++)
-            _data[i] = i + 1;       
+            _data[i] = i + 1;
     }
-    
+
     [Benchmark(Baseline = true)]
     public int Basic_ForLoop()
     {
@@ -25,7 +25,7 @@ public class Experiment1
             total += _data[i];
         return total;
     }
-    
+
     [Benchmark(Baseline = false)]
     public int Basic_ForEach()
     {

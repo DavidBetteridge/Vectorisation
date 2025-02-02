@@ -1,4 +1,7 @@
 ## Intro
+Show intro
+
+
 If you google "for loop vs foreach performance javascript" then you get lots of results saying a for loop is much quicker.
 Is the same true for c-sharp.
 Lets test it
@@ -11,7 +14,13 @@ ColumnChart will export a chart
 ReturnValueValidator tests that all the experiments return the same answer.
 Benchmark(Baseline = true) annotates that it's a test.  They are compared against the Baseline 
 
+
+D1
 I create an array with 10000 numbers,
+D2
+D3
+
+
 And then add them together
 
 Must be ran in release mode.

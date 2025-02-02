@@ -2,7 +2,7 @@ using System.Collections.Concurrent;
 using Benchly;
 using BenchmarkDotNet.Attributes;
 
-namespace Vectorisation;
+namespace From0to10000;
 
 [ColumnChart(Title = "Experiment4", Colors = "skyblue,slateblue")]
 [ReturnValueValidator(failOnError: true)]
@@ -18,18 +18,9 @@ public class Experiment4
             _data[i] = i + 1;
     }
 
-    [Params(1, 2, 10, 20, 50)]
+    [Params(1, 2, 10, 20, 50, 100, 5000, 10000)]
     public int NumberOfBlocks { get; set; }
-    
-    
-    [Benchmark(Baseline = true)]
-    public int Basic_ForLoop()
-    {
-        var total = 0;
-        for (var i = 0; i < _data.Length; i++)
-            total += _data[i];
-        return total;
-    }
+  
     
      [Benchmark]
      public int Parallel_ForLoop()

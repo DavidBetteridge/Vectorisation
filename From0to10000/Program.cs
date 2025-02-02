@@ -1,17 +1,9 @@
-﻿using System.Buffers;
-using System.Numerics;
+﻿using System.Numerics;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
+using From0to10000;
 
-BenchmarkRunner.Run<AddTests>();
-
-int Find()
-{
-    var a = SearchValues.Create(new[] { "David", "Kevin" }, StringComparison.Ordinal);
-    var text = "Lots of text";
-    var firstIndex = text.AsSpan().IndexOfAny(a);
-    return firstIndex;
-}
+BenchmarkRunner.Run<Experiment4>();
 
 
 public class AddTests
