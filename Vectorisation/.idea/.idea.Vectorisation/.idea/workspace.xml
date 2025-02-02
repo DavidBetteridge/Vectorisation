@@ -7,27 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e61d84c-3bf4-435d-8d6b-ce8657ddcf44" name="Changes" comment="wip">
-      <change afterPath="$PROJECT_DIR$/../From0to10000/01_Problem.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../From0to10000/12_Stages.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../From0to10000/14_Disassembly.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../From0to10000/16_coreinfo.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../From0to10000/54_Usage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../From0to10000/71_Conclusion.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/12_Experiment1_ForEach_il.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/13_Experiment1_ForEach_il.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/14_Experiment1_Assembly.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/15_Experiment1_Assembly.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/21_Experiment2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/22_Experiment2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/31_Experiment3.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/32_Experiment3.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment4.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/41_Experiment4.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/42_Experiment4.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment5.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/51_Experiment5.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment5_Full.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/52_Experiment5_Full.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment5_Small.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/53_Experiment5_Small.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment6.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/61_Experiment6.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Experiment6.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/62_Experiment6.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../From0to10000/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/Program.cs" afterDir="false" />
+    <list default="true" id="7e61d84c-3bf4-435d-8d6b-ce8657ddcf44" name="Changes" comment="Ready?">
+      <change beforePath="$PROJECT_DIR$/../From0to10000/10_Experiment1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/10_Experiment1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/21_Experiment2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/21_Experiment2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/31_Experiment3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/31_Experiment3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/41_Experiment4.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/41_Experiment4.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/51_Experiment5.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/51_Experiment5.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../From0to10000/61_Experiment6.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/61_Experiment6.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../From0to10000/script.md" beforeDir="false" afterPath="$PROJECT_DIR$/../From0to10000/script.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Vectorisation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Vectorisation/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -62,6 +48,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/245df95498734e798f9feae44d465e1c27a00/ea/3013b018/02000003pdb1.il" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/245df95498734e798f9feae44d465e1c27a00/ea/3013b018/02000003pdb1High.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/245df95498734e798f9feae44d465e1c27a00/ea/3013b018/02000003pdb1Low.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/4495c452a6db4dd9a969b142f0078f1426c00/ed/26a5ce67/02000003pdb1.il" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/4495c452a6db4dd9a969b142f0078f1426c00/ed/26a5ce67/02000003pdb1High.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/4495c452a6db4dd9a969b142f0078f1426c00/ed/26a5ce67/02000003pdb1Low.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/ef5cec97705c41e49b3152ad1eca7d561e00/45/b2d069be/02000003pdb1.il" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/ef5cec97705c41e49b3152ad1eca7d561e00/45/b2d069be/02000003pdb1High.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/ef5cec97705c41e49b3152ad1eca7d561e00/45/b2d069be/02000003pdb1Low.cs" root0="FORCE_HIGHLIGHTING" />
@@ -73,9 +62,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c8a0c29f6b62847968e491f036b1eefcadc78b227e93316c34077803d13705f/SearchValues.T.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d7bc48c79f70bd7a187cf86258b2815e2deb22274953837f735bbfe18f6c69e2/MemoryExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e81f11f4524b24a82a36f66b9cb15c6eecf1a69a2e5e78b869488765b243ae9/Array.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../From0to10000/Experiment1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../From0to10000/Experiment5.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../From0to10000/Experiment6.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../From0to10000/10_Experiment1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../From0to10000/51_Experiment5.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../From0to10000/61_Experiment6.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../From0to10000/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -97,7 +86,7 @@
     &quot;.NET Project.Vectorisation.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;talk&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -163,7 +152,7 @@
       <workItem from="1737017636996" duration="14109000" />
       <workItem from="1737449703141" duration="20499000" />
       <workItem from="1738066444478" duration="621000" />
-      <workItem from="1738067643549" duration="14127000" />
+      <workItem from="1738067643549" duration="16803000" />
     </task>
     <task id="LOCAL-00001" summary="First example">
       <option name="closed" value="true" />
@@ -245,7 +234,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738517706434</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Prep">
+      <option name="closed" value="true" />
+      <created>1738521074124</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1738521074124</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Ready?">
+      <option name="closed" value="true" />
+      <created>1738521482063</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1738521482063</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +268,8 @@
     <MESSAGE value="tidy up" />
     <MESSAGE value="update" />
     <MESSAGE value="wip" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip" />
+    <MESSAGE value="Prep" />
+    <MESSAGE value="Ready?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ready?" />
   </component>
 </project>

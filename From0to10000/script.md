@@ -1,5 +1,5 @@
 ## 00 - Show intro
-I got very side-tracked when preparing this talk and went on a bit of a journey.
+I got very side-tracked when preparing this talk and went on a bit of a journey which I will now share with you.
 
 ## 01 - Problem
 If you google "for loop vs foreach performance javascript" then you get lots of results saying a for loop is much quicker.
@@ -115,8 +115,6 @@ D51
 D52
 D53
 D54
-D55
-D56
 
 Which do you think will be quickest?
 

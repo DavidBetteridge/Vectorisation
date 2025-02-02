@@ -1,0 +1,44 @@
+using Benchly;
+using BenchmarkDotNet.Attributes;
+using System.Runtime.CompilerServices;
+
+namespace From0to10000
+{
+  [ColumnChart(Title = "Experiment1", Colors = "skyblue,slateblue")]
+  [ReturnValueValidator(true)]
+  public class Experiment1
+  {
+    [Nullable(1)]
+    private readonly int[] _data;
+
+    public Experiment1()
+    {
+      base..ctor();
+      this._data = new int[10000];
+      for (int i = 0; i < 10000; ++i)
+        this._data[i] = i + 1;
+    }
+
+    [Benchmark(20, "/Users/davidbetteridge/From0to10000/10_Experiment1.cs", Baseline = true)]
+    public int Basic_ForLoop()
+    {
+      int total = 0;
+      for (int i = 0; i < this._data.Length; ++i)
+        total += this._data[i];
+      return total;
+    }
+
+    [Benchmark(29, "/Users/davidbetteridge/From0to10000/10_Experiment1.cs", Baseline = false)]
+    public int Basic_ForEach()
+    {
+      int total = 0;
+      int[] data = this._data;
+      for (int index = 0; index < data.Length; ++index)
+      {
+        int value = data[index];
+        total += value;
+      }
+      return total;
+    }
+  }
+}
