@@ -34,24 +34,5 @@ public class Experiment2
             total += value;
         return total;
     }
-
-    // Does UINT mean no lower bound check?
-    [Benchmark]
-    public int Using_UInt()
-    {
-        var total = 0;
-        for (uint i = 0; i < _data.Length; i++)
-            total += _data[i];
-        return total;
-    }
     
-    [Benchmark]
-    public int LocalArray()
-    {
-        var data = _data;
-        var total = 0;
-        for (uint i = 0; i < data.Length; i++)
-            total += data[i];
-        return total;
-    }
 }

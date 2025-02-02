@@ -26,26 +26,4 @@ public class Experiment3
         return total;
     }
 
-    [Benchmark]
-    public int Parallel_ForLoop()
-    {
-        var total = 0;
-        var data = _data;
-        Parallel.For(0, data.Length, i =>
-        {
-            Interlocked.Add(ref total, data[i]);
-        });
-        return total;
-    }
-
-    [Benchmark]
-    public int Parallel_ForEach()
-    {
-        var total = 0;
-        Parallel.ForEach(_data, value =>
-        {
-            Interlocked.Add(ref total, value);
-        });
-        return total;
-    }
 }
