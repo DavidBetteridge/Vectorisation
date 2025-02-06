@@ -10,7 +10,7 @@ Check unrolled is missing
 ## 01 - Problem
 If you google "for loop vs foreach performance javascript" then you get lots of results saying a for loop is much quicker.
 Is the same true for c-sharp?
-Normally we don't care - but Advent of Code!
+Normally we don't care - but Advent of Code beat Rust devs
 Let's test it
 
 ## 10 - Experiment 1

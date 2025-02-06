@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectorisation", "Vectorisation.csproj", "{DE89E047-E407-4108-8CF9-A8977BBADF0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "From0to10000", "From0to10000.csproj", "{E6A44811-2FFD-4E2E-9CD7-AECF3FBB6B99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DE89E047-E407-4108-8CF9-A8977BBADF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE89E047-E407-4108-8CF9-A8977BBADF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE89E047-E407-4108-8CF9-A8977BBADF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE89E047-E407-4108-8CF9-A8977BBADF0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6A44811-2FFD-4E2E-9CD7-AECF3FBB6B99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6A44811-2FFD-4E2E-9CD7-AECF3FBB6B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6A44811-2FFD-4E2E-9CD7-AECF3FBB6B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6A44811-2FFD-4E2E-9CD7-AECF3FBB6B99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

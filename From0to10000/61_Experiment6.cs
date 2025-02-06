@@ -8,6 +8,6 @@ namespace From0to10000;
 [ColumnChart(Title = "Experiment6", Colors = "skyblue,slateblue")]
 public class Experiment6
 {
-   
+   //D61 D62 D63
    
 }
