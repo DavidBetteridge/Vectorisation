@@ -2,7 +2,9 @@
 
 * Use Benchmark.net for measuring quick things.
 
-* Remember what you are measuring.
+* but remember what you are measuring.
+
+* Challenge what you think you know!
 
 * The core libraries are more than just abstractions.
 

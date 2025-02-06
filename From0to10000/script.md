@@ -1,9 +1,16 @@
+Check source code is missing
+Check snippets work
+Check unrolled is missing
+
 ## 00 - Show intro
-I got very side-tracked when preparing this talk and went on a bit of a journey which I will now share with you.
+* Last talk used different languages and tools.  Single tool this time - RIDER
+* When Kevin asked me to do a talk,  I agreed with a different topic in mind.
+* Researching the original talk and sent me on a bit of a journey which I will now share with you.
 
 ## 01 - Problem
 If you google "for loop vs foreach performance javascript" then you get lots of results saying a for loop is much quicker.
-Is the same true for c-sharp.
+Is the same true for c-sharp?
+Normally we don't care - but Advent of Code!
 Let's test it
 
 ## 10 - Experiment 1
@@ -127,7 +134,7 @@ linq but why?
 
 Drill into the sum source code
 
-The vector class uses SIMD assembly instructions which works on multiple pieces of data at once.
+The vector class uses SIMD ( Single Instruction Multiple Data) assembly instructions which works on multiple pieces of data at once.
 
 ## 54 - Experiment 5 - Usage
 
